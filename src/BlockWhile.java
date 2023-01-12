@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Date;
 public class BlockWhile {
     public static void main(String[] args) {
         Scanner in = new Scanner (System.in);
@@ -27,7 +28,7 @@ public class BlockWhile {
             balance = balance + interest;
             years++;
         }
-        System.out.printf("So you are %s and you have %d years old. \n", name, age);
+        System.out.printf("Today is %te So you are %s and you have %d years old. ", new Date(), name, age);
         System.out.println("You can stop work at " + years + " years.");
     }
 }
