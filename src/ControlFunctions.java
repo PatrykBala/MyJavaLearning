@@ -3,19 +3,18 @@ public class ControlFunctions {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Your year target");
-        int target = in.nextInt();
-        System.out.println("Your current status of target");
-        int current = in.nextInt();
+        System.out.println("What is your cash target ?");
+        int goal= in.nextInt();
+        System.out.println("How many cash put you at year?");
+        int payment = in.nextInt();
 
-        String success = "Great job.";
-        String fail = "You must work harder!";
+        int current = 0;
+        int years = 0;
 
-        if (current >= target) {
-            System.out.println(success);
+        while (current < goal) {
+            current = current + payment;
+            years++;
         }
-        else{
-            System.out.println(fail);
-        }
+        System.out.println("You need " + years + " years to to get your " + goal + " cash goal.");
     }
 }
